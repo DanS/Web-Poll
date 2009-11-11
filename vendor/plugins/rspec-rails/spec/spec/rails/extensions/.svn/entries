@@ -1,0 +1,40 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec-rails/spec/spec/rails/extensions
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+active_record_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+29e9ded8e6807ee12974a850c45a72da
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+action_view_base_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+c07bc36b2e829ab84b83bcbb6200c308
+2009-06-26T20:02:45.054401Z
+2
+dan
+

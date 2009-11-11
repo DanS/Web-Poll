@@ -1,0 +1,79 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec-rails/spec/spec/rails
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+extensions
+dir
+
+interop
+dir
+
+matchers
+dir
+
+spec_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+1001a1a1e8979fb77aa2a08ec537b475
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+sample_modified_fixture.rb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+b6ce8a2ae2669d83ea5d3f01ec82468a
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+example
+dir
+
+mocks
+dir
+
+spec_server_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+0f6045386840b025a1f5a59d09cf6419
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+sample_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+b73edddc9ac112aa3bede081f1672c1a
+2009-06-26T20:02:45.054401Z
+2
+dan
+

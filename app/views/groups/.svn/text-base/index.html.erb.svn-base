@@ -1,0 +1,31 @@
+<h1>Listing groups</h1>
+
+<table>
+  <tr>
+    <th>name</th>
+  </tr>
+  <%if @groups %>
+    <% for group in @groups %>
+      <tr>
+        <td><%=h group.name %></td>
+        <td>
+          <% unless @groups.first == group %>
+            <%= link_to 'moveup', moveup_path(group.poll_id, group.position) %>
+          <% end %>
+        </td>
+        <td>
+          <% unless @groups.last == group %>
+            <%= link_to 'movedown', movedown_path(group.poll_id, group.position) %>
+          <% end %>
+        </td>
+        <td><%= link_to 'Edit', edit_group_path(group) %></td>
+        <td><%= link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  <%  end %>
+</table>
+
+<br />
+
+<%= link_to 'Add New Group', new_group_path %><br />
+<%= link_to 'Back to Edit Poll', edit_poll_path(@poll.id) %>

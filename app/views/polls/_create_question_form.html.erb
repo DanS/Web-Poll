@@ -1,0 +1,22 @@
+
+<% form_for(@poll) do |f| %>
+  <div id="questions">
+    <%= f.error_messages %>
+
+    <p>
+      <%= f.label :name, "Poll Name" %>
+      <%= f.text_field :name %>
+    </p>
+    <div class="groups"
+    <% f.fields_for :groups do |group_form| %>
+      <%= render :partial=>"group", :locals => { :f => group_form } %>
+    <% end %>
+      <p>
+        <%= add_child_link "Add Another Group", f, :groups %>
+      </p>
+    </div>
+  </div>
+  <p>
+    <%= f.submit submit_button_name %>
+  </p>
+<% end %>

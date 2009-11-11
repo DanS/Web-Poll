@@ -1,0 +1,29 @@
+<p>
+<h1><%=h @poll.name %></h1>
+</p>
+<% form_for @answer do |f| %>
+  <%= f.hidden_field :post, {
+    :id=>"answer_poll_id", :name=>"answer[poll_id]", :value=>"#{@poll.id}"}%>
+  <%= f.hidden_field :post, {
+    :id=>"responder_id", :name=>"answer[responder_id]", :value=>"#{@responder_id}"}%>
+  <div class="questions">
+    <% for group in @poll.questions_in_groups %>
+      <fieldset><legend> <%=h group[:group_name] %></legend>
+        <% for question in group[:questions] %>
+          <div class="qa-line">
+            <%= "<label for\"answer#{question.id}\" class=\"#{question.form_field_type}_label\"
+              id=\"#{question.field_name}\">#{question.text}</label>" %>
+            <%= render :partial => "#{question.form_field_type}",
+              :locals=>{:question=>question, :f=>f}%>
+          </div>
+        <% end -%>
+      </fieldset>
+    <% end -%>
+  </div>
+
+  <p>
+    <%= f.submit "Save Answers" %>
+  </p>
+
+<% end %>
+<%= link_to 'Back', polls_path %>

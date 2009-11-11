@@ -1,0 +1,43 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/db
+file:///usr/local/subversion/webpoll
+
+
+
+2009-09-28T14:43:59.872319Z
+27
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c40bb472-456d-0410-acba-f3f436a8918a
+
+schema.rb
+file
+
+
+
+
+2009-09-28T12:59:48.000000Z
+d23333b626eaccdaf9de30476f94f646
+2009-09-28T14:42:04.105699Z
+26
+dan
+
+migrate
+dir
+

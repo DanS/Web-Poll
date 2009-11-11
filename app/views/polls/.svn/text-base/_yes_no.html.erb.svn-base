@@ -1,0 +1,20 @@
+<%#determine if radio buttons should be vertical or horizontal %>
+<% longest_answer = (question.answer_choices.split('|').max {|a,b| a.length <=> b.length}).length -%>
+<% if (question.text.length + longest_answer)  > 70  -%>
+  <% separator = '<br />' -%>
+<% else %>
+  <% separator = '' -%>
+<% end -%>
+
+<%#generate buttons %>
+<%= "#{separator}" %>
+<% for choice in question.answer_choices.split('|') -%>
+  <% selected = '' %>
+  <%#@answer[question.field_name] == choice.strip ? 'checked' : '' %>
+  <%= radio_button(@answer, :post, choice,
+    :id=>"#{choice}#{question.id}",
+    :name=>"answer[answer_to_question_#{question.id}]",
+    :checked=>selected ) %>
+  <%= "<label for=\"#{choice}#{question.id}\" class=\"choice\">#{choice}</label>" %>
+  <%= "#{separator}" %>
+<% end -%>

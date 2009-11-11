@@ -1,0 +1,56 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/doc
+file:///usr/local/subversion/webpoll
+
+
+
+2009-07-13T23:23:12.884807Z
+5
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+README_FOR_APP
+file
+
+
+
+
+2009-06-26T11:37:59.000000Z
+6b2973f35d584590c045b1f6bc78a8cb
+2009-07-13T23:23:12.884807Z
+5
+dan
+
+user stories.txt
+file
+
+
+
+
+2009-07-10T14:00:11.000000Z
+e01e248ced94a68f4142658d62fa71c9
+2009-07-13T23:23:12.884807Z
+5
+dan
+
+zillafive
+dir
+
+zillafive.zip
+file
+
+
+
+
+2009-07-10T18:16:27.000000Z
+f9350df4ead6829db588f4684807910c
+2009-07-13T23:23:12.884807Z
+5
+dan
+has-props
+

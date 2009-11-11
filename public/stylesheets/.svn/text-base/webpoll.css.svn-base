@@ -1,0 +1,266 @@
+.subtitle{
+    padding-left: 20px;
+}
+
+.answers li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.groups {
+    margin: 10px 0 0 15px;
+}
+
+.fieldWithErrors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+}
+
+.question, .select-group {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 7px;
+}
+
+#errorExplanation {
+    width: 400px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff;
+}
+
+#errorExplanation p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+#errorExplanation ul li {
+    font-size: 12px;
+    list-style: square;
+}
+
+/* from downloaded design */
+
+body {
+    background-color:#EBEBEB;
+    font-family: impact, sans-serif;
+}
+
+legend {
+    font-size:   12px;
+}
+
+a {
+    color:#000000;
+    text-decoration:none;
+}
+
+.bottom-nav {
+    margin: 7px;
+}
+
+#content td, #content th {
+    padding-left: 10px;
+}
+#container {
+    width:800px;
+    height:auto;
+    margin: 0 auto;
+}
+
+#header {
+    width:100%;
+    height:165px;
+    background-color:#006699;
+}
+
+#header h1, #header h2 {
+    width: 500px;
+}
+
+h1 {
+    font-size:50px;
+    color:#CCCCCC;
+    margin: 15px 0 0 20px;
+}
+
+h2 {
+    font-size:26px;
+    color:#999999;
+    margin: 0 0 0 10px;
+}
+
+h3 {
+    font-size:22px;
+    color:#006699;
+    margin: 5px 0 0 5px;
+}
+
+#notice{
+    margin: 10px;
+    font-size: 14px;
+    color:black;
+    background-color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p, table, #choices {
+    font-size:12px;
+    color:#000000;
+    margin: 0 10px 0 10px;
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#login-status a{
+    color: white;
+}
+
+#login-status a:hover {
+    border-bottom: 3px solid #999999;
+}
+
+#login-status {
+    color: white;
+    float: right;
+    margin: 0 0 20px 0;
+    font-size: 10px;
+    width: 90px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#horiznav {
+    float:left;
+    margin-top: 30px;
+    color:#CCCCCC;
+}
+
+#horiznav a{
+    color:#CCCCCC;
+    font-family: impact, sans-serif;
+    text-decoration:none;
+    margin: 30px 15px 0 15px;
+}
+#horiznav a:hover {
+    border-bottom: 3px solid #999999;
+}
+
+#horiznav a:active {
+    color:#999999;
+    border-bottom: 3px solid #CCCCCC;
+}
+
+#vertinav {
+    background-color:#D7D7D7;
+    width:200px;
+    height:100%;
+    float:left;
+}
+
+#vertinav ul {
+    list-style: none;
+    display:inline;
+}
+
+#content a{
+    color:#666666;
+    text-decoration: underline;
+}
+
+#vertinav li a{
+    padding-left: 10px;
+    margin:0 0 0 5px;
+    color:#666666;
+    text-decoration:none;
+}
+
+#vertinav li a:hover, #content a:hover {
+    color: #006699;
+}
+
+.vertinavheader {
+    font-size:22px;
+    color:#000000;
+    margin-left: 15px;
+}
+
+
+#vertinavcontent {
+    margin-left:15px;
+    color:#666666;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: x-small;
+}
+
+#top-line {
+    width: 500px;
+    float: left;
+}
+
+#content {
+    background-color:#E4E4E4;
+    float:right;
+    width:600px;
+}
+
+#questions p {
+    clear: both;
+}
+.qa-line {
+    float: left;
+    clear: left;
+    margin: 5px;
+    width: 100%;
+}
+
+.qa-line .text_field_label {
+    width: 100px;
+}
+
+.qa-line label{
+    float: left;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.qa-line input{
+    float: left;
+    margin-left: 50px;
+}
+
+.group-label{
+    font-weight: bold;
+}
+
+textarea {
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+fieldset
+{
+    border: 1px solid;
+    margin-bottom: 15px;
+}
+
+.even{
+    background-color: #aaff77;
+}
+.odd{
+    background-color: #ffff66;
+}
+

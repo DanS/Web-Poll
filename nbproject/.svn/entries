@@ -1,0 +1,55 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/nbproject
+file:///usr/local/subversion/webpoll
+
+
+
+2009-10-02T19:21:08.642756Z
+29
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c40bb472-456d-0410-acba-f3f436a8918a
+
+project.properties
+file
+
+
+
+
+2009-06-26T13:05:03.000000Z
+c0338968e0168d5ae6c2fc7cc3507333
+2009-07-13T23:25:44.425051Z
+6
+dan
+
+project.xml
+file
+
+
+
+
+2009-06-26T18:09:02.000000Z
+e28c4353719834405285eb970ec089a2
+2009-07-13T23:25:44.425051Z
+6
+dan
+
+private
+dir
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Web Poll <%= controller.controller_name %> <%= controller.action_name %> </title>
+    <%= stylesheet_link_tag 'webpoll' %>
+    <%= javascript_include_tag :defaults, "webpoll"  %>
+  </head>
+  <body <%= "onload=#{@onload}" %>>
+    <div id="container">
+      <div id="header">
+        <div id="top-line">
+          <h1>Web Poll</h1>
+          <h2>&quot;Your Questions Answered!&quot; </h2>
+        </div>
+        <div id="login-status">
+          <% if current_user %>
+            <%= link_to "Edit Profile", edit_user_path(:current) %> |
+            <%= link_to "Logout", logout_path %>
+          <% else %>
+            <%= link_to "Register", new_user_path  %> |
+            <%= link_to "login", login_path  %>
+          <% end %>
+        </div>
+        <div id="horiznav">
+          <a href="/">Home</a>
+          |
+          <a href="#">Partners</a>
+          |
+          <a href="#">Services</a>
+          |
+          <a href="#">Locations</a>
+          |
+          <a href="#">Contact</a>
+          |
+        </div>
+      </div>
+      <div id="vertinav">
+        <span class="vertinavheader">navigation</span>
+        <ul>
+          <li><a href="/">Home</a></li>
+
+          <!-- subnav menu -->
+          <% if @poll && @poll.id %>
+            <%= content_tag('li', "Working on: #{@poll.name}") %>
+            <%= content_tag('li', link_to('Show Poll', poll_path(@poll))) %>
+            <%= content_tag('li', link_to('Edit Poll', edit_poll_path(@poll))) %>
+            <%= content_tag('li', link_to('Answer Summary', answer_path(@poll))) %>
+            <%= content_tag('li', link_to('Answer table', :controller=>'answers',
+                :action=>'tabular', :id=>(@poll))) %>
+            <li>Change Order of...
+              <%= content_tag('li', link_to('Groups', poll_groups_path(@poll))) %>
+              <%= @poll.groups.map {|g| content_tag('li',
+                  link_to(g.name, poll_group_questions_path(@poll, g)))} %>
+            </li>
+          <% end %>
+
+        </ul><br />
+        <div id="vertinavcontent">
+          Copyright &copy; 2006 <a href="#">You</a><br />
+          Design By <a href="http://www.zilladesigns.net">Jeremy D. </a>
+        </div>
+        <br />
+      </div>
+      <div id="content">
+
+        <p id="notice"><%= flash[:notice] %></p>
+        <%= yield %>
+
+      </div>
+    </div>
+  </body>
+</html>

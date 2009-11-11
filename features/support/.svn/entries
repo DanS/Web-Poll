@@ -1,0 +1,40 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/features/support
+file:///usr/local/subversion/webpoll
+
+
+
+2009-07-28T18:53:22.648562Z
+8
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+paths.rb
+file
+
+
+
+
+2009-07-24T20:34:39.000000Z
+19af9a64a8b222b43c8a32c10e197b7a
+2009-07-28T18:53:22.648562Z
+8
+dan
+
+env.rb
+file
+
+
+
+
+2009-07-24T20:34:39.000000Z
+60cfe5da781469197470431e4e246600
+2009-07-28T18:53:22.648562Z
+8
+dan
+

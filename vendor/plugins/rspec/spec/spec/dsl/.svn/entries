@@ -1,0 +1,28 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec/spec/spec/dsl
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+main_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+65b90f2c2043da349b159c974b742b3a
+2009-06-26T20:02:45.054401Z
+2
+dan
+

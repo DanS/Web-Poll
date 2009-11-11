@@ -1,0 +1,45 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec-rails/generators/rspec_model
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+rspec_model_generator.rb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+78fbd830c3f653e163f836e02ffabed5
+2009-06-26T20:02:45.054401Z
+2
+dan
+has-props
+
+USAGE
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+9491d3df4c1ef2b4171a576a4c65d28b
+2009-06-26T20:02:45.054401Z
+2
+dan
+has-props
+
+templates
+dir
+

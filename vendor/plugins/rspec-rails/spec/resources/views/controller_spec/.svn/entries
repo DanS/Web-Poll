@@ -1,0 +1,88 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec-rails/spec/resources/views/controller_spec
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+action_with_errors_in_template.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+dc49c02c30c5bd5bd93272fcf0775403
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+_partial.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+action_setting_flash_after_session_reset.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+68b329da9893e34099c7d8ad5cb9c940
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+action_setting_flash_before_session_reset.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+68b329da9893e34099c7d8ad5cb9c940
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+action_with_template.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+6f554ac0584e1ba4208a95e53ae7e8b4
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+action_setting_the_assigns_hash.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2009-06-26T20:02:45.054401Z
+2
+dan
+

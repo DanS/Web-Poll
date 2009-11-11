@@ -1,0 +1,40 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec/features/expectations
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+expect_change.feature
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+25ebe27185e661d7125dc48079ce0dc1
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+expect_error.feature
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+c569c46fd366faef86a3e501781d0c59
+2009-06-26T20:02:45.054401Z
+2
+dan
+

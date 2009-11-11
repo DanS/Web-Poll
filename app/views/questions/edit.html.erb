@@ -1,0 +1,40 @@
+<h1>Editing question</h1>
+
+<% form_for(@question) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :poll_id %><br />
+    <%= f.text_field :poll_id %>
+  </p>
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </p>
+  <p>
+    <%= f.label :group_id %><br />
+    <%= f.text_field :group_id %>
+  </p>
+  <p>
+    <%= f.label :form_field_type %><br />
+    <%= f.text_field :form_field_type %>
+  </p>
+  <p>
+    <%= f.label :answer_choices %><br />
+    <%= f.text_field :answer_choices %>
+  </p>
+  <p>
+    <%= f.label :field_username %><br />
+    <%= f.text_field :field_username %>
+  </p>
+  <p>
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @question %> |
+<%= link_to 'Back', questions_path %>

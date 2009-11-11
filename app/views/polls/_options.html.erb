@@ -1,0 +1,5 @@
+<br />
+<select <%= "name=\"answer[answer_to_question_#{question.id}]\"" %> >
+  <%= options_for_select(question.answer_choices.split('|'),
+    @answer[question.id]) %>
+</select>

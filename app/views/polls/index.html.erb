@@ -1,0 +1,23 @@
+<h1>Listing polls</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @polls.each do |poll| %>
+  <tr>
+    <td><%=h poll.name %></td>
+    <td><%= link_to 'Show', poll %></td>
+    <td><%= link_to 'Edit', edit_poll_path(poll) %></td>
+    <td><%= link_to 'Answer Summary', answer_path(poll) %></td>
+    <td><%= link_to 'Answer Table', :controller=>'answers',
+      :action=>'tabular', :id=>(poll) %></td>
+    <td><%= link_to 'Destroy', poll, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New poll', new_poll_path %>

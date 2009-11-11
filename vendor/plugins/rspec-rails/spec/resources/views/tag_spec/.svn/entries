@@ -1,0 +1,52 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec-rails/spec/resources/views/tag_spec
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+no_tags.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+d067e83b6a5a2c84d8ffbc6be7a6825f
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+single_div_with_no_attributes.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+f9df91370d9b344946e23cbcd6a1541f
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+single_div_with_one_attribute.html.erb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+e4d6f18b3689651870f990c875cf643a
+2009-06-26T20:02:45.054401Z
+2
+dan
+

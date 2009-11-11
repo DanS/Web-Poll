@@ -1,0 +1,55 @@
+
+<% new_or_existing = questions.new_record? ? 'new' : 'existing' %>
+<% prefix = "poll[#{new_or_existing}_question_attributes][]" %>
+<% fields_for prefix, questions  do |qf| %>
+  <%= qf.error_messages %>
+  <div class="question" >
+    <p>
+      <%= qf.label "Question text" %>
+      <br/>
+      <%= qf.text_area :text, :rows=>4 %>
+    </p>
+    <div id="form_field_type">
+      <p>
+        <!-- FORM FIELD TYPE -->
+        <%= qf.label :form_field_type %>
+        <% selection = questions.form_field_type || 'text_field' %>
+        <%= qf.select( "form_field_type", ['text_field', 'text_area', 'radio_button',
+            'options'], {:selected=>selection},
+          {:onchange=>"showHideChoices(this.selectedIndex, this);"}) %>
+      </p>
+      <% if ['options', 'radio_button'].include?(qf.instance_values["object"].form_field_type) %>
+        <div id="choices" >
+      <% else %>
+         <div id="choices" style="display:none;">
+      <% end %>
+          <p>
+            <%= qf.label :answer_choices, "This field type requires a list of possible answers,
+  list answer choices below" %>
+            <br/>
+            <i>separate each answer with a vertical bar | </i>
+            <br/>
+            <%= qf.text_area :answer_choices, :cols=>80, :rows=>4 %>
+          </p>
+        </div>
+      </div>
+      <p>
+        <!-- GROUP -->
+      <div class="select-group">
+        <%= qf.label :group %>
+        <% selection = questions.group_id || 0 %>
+        <%= qf.select('group_id', group_list, {:selected=>selection}, {:class=>"group-option"}) %>
+        <%= render :partial=>"questions/edit_groups" %>
+        <%= link_to_function 'Edit_Groups', "showGroupEdit(this)", {:class=>'edit-group-link'} %>
+
+      </div>
+      <p>
+        <%= qf.label :field_name %>
+        <%= qf.text_field :field_name %>
+      </p>
+      <p>
+        <%= link_to_function "remove this question", "$(this).up('.question').blindUp()"  %>
+      </p>
+      <hr>
+    </div>
+<% end %>

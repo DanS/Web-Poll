@@ -1,0 +1,52 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec/features/example_groups
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+implicit_docstrings.feature
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+b1b0c4a504b7e1cbec0d5684ad2f0031
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+nested_groups.feature
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+93c9bee4f2d950bfc956ef61507218bf
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+example_group_with_should_methods.feature
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+f0de617b597504155c62804020440170
+2009-06-26T20:02:45.054401Z
+2
+dan
+

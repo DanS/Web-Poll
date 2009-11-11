@@ -1,0 +1,49 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/app/views
+file:///usr/local/subversion/webpoll
+
+
+
+2009-10-08T15:24:27.034768Z
+38
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c40bb472-456d-0410-acba-f3f436a8918a
+
+groups
+dir
+
+layouts
+dir
+
+users
+dir
+
+answers
+dir
+
+user_sessions
+dir
+
+polls
+dir
+
+questions
+dir
+

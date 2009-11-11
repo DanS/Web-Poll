@@ -1,0 +1,67 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec/spec/spec/interop/test/unit
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+testsuite_adapter_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+aed312e75665726bc492596d26bc2083
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+spec_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+b1ca6087b532d37098ab2848c0b5dbd5
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+testcase_spec.rb
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+c94af4d61c61b688878795fb896e7892
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+test_unit_spec_helper.rb
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+9603f81250f163cbc94036de12f492b3
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+resources
+dir
+

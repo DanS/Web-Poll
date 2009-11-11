@@ -1,0 +1,40 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/app/views/layouts
+file:///usr/local/subversion/webpoll
+
+
+
+2009-10-08T13:16:38.640699Z
+36
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c40bb472-456d-0410-acba-f3f436a8918a
+
+application.html.erb
+file
+
+
+
+
+2009-10-08T12:40:48.000000Z
+283e2690e53c359be041f8cd3c805727
+2009-10-08T13:16:38.640699Z
+36
+dan
+

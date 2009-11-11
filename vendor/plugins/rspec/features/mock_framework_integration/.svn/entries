@@ -1,0 +1,52 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec/features/mock_framework_integration
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+use_rr.feature
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+eeb582b3d3668a0ddbb165cec70b0953
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+use_mocha.feature
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+6271346bcae05bff52e31b14036c5662
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+use_flexmock.feature
+file
+
+
+
+
+2009-06-26T13:05:41.000000Z
+bc7ee307082e28d88458778838990c8a
+2009-06-26T20:02:45.054401Z
+2
+dan
+

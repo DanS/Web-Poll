@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  poll_id: 1
+  text: MyString
+  group_id: 1
+  form_field_type: MyString
+  answer_choices: MyString
+  field_name: MyString
+  position: 1
+
+two:
+  poll_id: 1
+  text: MyString
+  group_id: 1
+  form_field_type: MyString
+  answer_choices: MyString
+  field_name: MyString
+  position: 1

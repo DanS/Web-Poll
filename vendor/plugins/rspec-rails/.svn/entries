@@ -1,0 +1,136 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec-rails
+file:///usr/local/subversion/webpoll
+
+
+
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+License.txt
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+ba4089033decaf7e60677fc239b44a6c
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+Rakefile
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+b24a90212e8f376cf6ef34ac96d32202
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+README.rdoc
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+e60bc4037a36823440959de59911fa00
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+TODO.txt
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+14e8e29f3924cb1e1232682c25b19e95
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+Manifest.txt
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+5201b4dcedd22d8d96355c536e0d1742
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+init.rb
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+640f74b8156893c1bc98a2050c8589d3
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+lib
+dir
+
+History.rdoc
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+a2d84c856759c4c6bab86dd21948e163
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+generators
+dir
+
+spec
+dir
+
+.document
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+7f80f1e8cb6c02bfd6166d652e5344e1
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+Upgrade.rdoc
+file
+
+
+
+
+2009-06-26T13:05:51.000000Z
+d93833fbb2758174123c6d9d0b217709
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+features
+dir
+

@@ -1,0 +1,73 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/spec
+file:///usr/local/subversion/webpoll
+
+
+
+2009-08-05T16:26:43.862038Z
+10
+dan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+c40bb472-456d-0410-acba-f3f436a8918a
+
+models
+dir
+
+controllers
+dir
+
+fixtures
+dir
+
+spec_helper.rb
+file
+
+
+
+
+2009-07-24T21:00:47.000000Z
+84a002140107dec9470268cfa63b16e0
+2009-07-28T18:53:22.648562Z
+8
+dan
+
+rcov.opts
+file
+
+
+
+
+2009-06-26T13:05:52.000000Z
+55fe73f43f74d4403124e54fb71bf05a
+2009-06-26T20:02:45.054401Z
+2
+dan
+
+spec.opts
+file
+
+
+
+
+2009-06-26T13:06:24.000000Z
+3672575ff6c720793771fbf9af771c50
+2009-06-26T20:02:45.054401Z
+2
+dan
+

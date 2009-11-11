@@ -1,0 +1,13 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"Answer" [shape=Mrecord, label="{Answer|answer_text :text\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Group" [shape=Mrecord, label="{Group|name :string\lposition :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Poll" [shape=Mrecord, label="{Poll|name :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Question" [shape=Mrecord, label="{Question|text :string\lform_field_type :string\lanswer_choices :string\lfield_name :string\lposition :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"User" [shape=Mrecord, label="{User|username :string\lemail :string\lcrypted_password :string\lpassword_salt :string\lpersistence_token :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Poll" -> "Group" [arrowtail=crow, arrowhead=dot, dir=both]
+	"Poll" -> "Question" [arrowtail=crow, arrowhead=dot, dir=both]
+	"Question" -> "Answer" [arrowtail=crow, arrowhead=dot, dir=both]
+	"User" -> "Answer" [arrowtail=crow, arrowhead=dot, dir=both]
+	"User" -> "Poll" [arrowtail=crow, arrowhead=dot, dir=both]
+}

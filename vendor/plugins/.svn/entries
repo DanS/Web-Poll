@@ -1,0 +1,34 @@
+8
+
+dir
+38
+file:///usr/local/subversion/webpoll/trunk/vendor/plugins
+file:///usr/local/subversion/webpoll
+
+
+
+2009-08-28T21:27:21.242343Z
+20
+dan
+has-props
+
+svn:special svn:externals svn:needs-lock
+svn:externals
+
+
+
+
+
+
+
+
+
+
+c40bb472-456d-0410-acba-f3f436a8918a
+
+rspec-rails
+dir
+
+rspec
+dir
+
