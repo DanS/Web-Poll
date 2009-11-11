@@ -1,106 +1,0 @@
-8
-
-dir
-38
-file:///usr/local/subversion/webpoll/trunk
-file:///usr/local/subversion/webpoll
-
-
-
-2009-10-08T15:24:27.034768Z
-38
-dan
-has-props
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-c40bb472-456d-0410-acba-f3f436a8918a
-
-test
-dir
-
-app
-dir
-
-log
-dir
-
-Rakefile
-file
-
-
-
-
-2009-06-26T11:37:59.000000Z
-17f2f134da4cd31ea095d5868ca89e86
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-db
-dir
-
-nbproject
-dir
-
-.autotest
-file
-
-
-
-
-2009-06-26T13:06:11.000000Z
-53544e43efcdaf48a305a3b0b1d53a80
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-spec
-dir
-
-vendor
-dir
-
-README
-file
-
-
-
-
-2009-06-26T11:37:59.000000Z
-a58e68a7599c976f071d5b9c6fa67fb3
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-tmp
-dir
-
-script
-dir
-
-doc
-dir
-
-config
-dir
-
-lib
-dir
-
-public
-dir
-
-features
-dir
-

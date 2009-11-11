@@ -1,31 +1,0 @@
-8
-
-dir
-38
-file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec/features/support
-file:///usr/local/subversion/webpoll
-
-
-
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-
-svn:special svn:externals svn:needs-lock
-
-matchers
-dir
-
-env.rb
-file
-
-
-
-
-2009-06-26T13:05:41.000000Z
-1d471259324b81761a78bfe4f57252c4
-2009-06-26T20:02:45.054401Z
-2
-dan
-

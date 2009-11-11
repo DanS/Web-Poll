@@ -1,5 +1,0 @@
-<%= text_field(@answer, :post, {
-    :id=>"answer#{question.id}",
-    :name=>"answer[answer_to_question_#{question.id}]",
-    #:value=>"#{@answer[question.field_name]}"
-  } ) %>

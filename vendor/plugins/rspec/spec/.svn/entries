@@ -1,85 +1,0 @@
-8
-
-dir
-38
-file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec/spec
-file:///usr/local/subversion/webpoll
-
-
-
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-
-svn:special svn:externals svn:needs-lock
-
-README.jruby
-file
-
-
-
-
-2009-06-26T13:05:41.000000Z
-264a308541277d35073c4bb322265625
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-rspec_suite.rb
-file
-
-
-
-
-2009-06-26T13:05:41.000000Z
-8470e29ec9ce6355906c2c30050d7614
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-autotest
-dir
-
-spec
-dir
-
-ruby_forker.rb
-file
-
-
-
-
-2009-06-26T13:05:41.000000Z
-c92f1cdc11bd6303668e04cc0411079f
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-spec_helper.rb
-file
-
-
-
-
-2009-06-26T13:05:41.000000Z
-a80a2b1c2c1e196cdb12b541b74ccf99
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-support
-dir
-
-spec.opts
-file
-
-
-
-
-2009-06-26T13:05:41.000000Z
-e4dfab1b4d8ff0c2a228ede08199aafe
-2009-06-26T20:02:45.054401Z
-2
-dan
-

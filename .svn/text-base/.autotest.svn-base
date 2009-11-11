@@ -1,4 +1,0 @@
-require 'autotest/growl'
-
-# this needs to be last require
-require 'autotest/fsevent' 

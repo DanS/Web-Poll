@@ -1,34 +1,0 @@
-8
-
-dir
-38
-file:///usr/local/subversion/webpoll/trunk/vendor/plugins/rspec/lib
-file:///usr/local/subversion/webpoll
-
-
-
-2009-06-26T20:02:45.054401Z
-2
-dan
-
-
-svn:special svn:externals svn:needs-lock
-
-autotest
-dir
-
-spec
-dir
-
-spec.rb
-file
-
-
-
-
-2009-06-26T13:05:41.000000Z
-470968317cf89461d6735553a43e46a9
-2009-06-26T20:02:45.054401Z
-2
-dan
-

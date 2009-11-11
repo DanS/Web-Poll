@@ -1,55 +1,0 @@
-8
-
-dir
-38
-file:///usr/local/subversion/webpoll/trunk/test
-file:///usr/local/subversion/webpoll
-
-
-
-2009-08-28T21:29:34.617866Z
-21
-dan
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-c40bb472-456d-0410-acba-f3f436a8918a
-
-unit
-dir
-
-test_helper.rb
-file
-
-
-
-
-2009-08-18T23:47:05.000000Z
-df32115ad8a64363d51340d111de77a1
-2009-08-19T19:57:43.379188Z
-19
-dan
-
-performance
-dir
-
-functional
-dir
-
-integration
-dir
-
-fixtures
-dir
-

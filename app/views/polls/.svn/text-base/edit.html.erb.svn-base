@@ -1,7 +1,0 @@
-<h1>Editing poll</h1>
-
-<%= render :partial => 'create_question_form', :locals=>{:submit_button_name=>"Update"} %>
-
-<div class="bottom-nav">
-  <%= link_to 'Back', polls_path %>
-</div>
