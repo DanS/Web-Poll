@@ -79,4 +79,5 @@ class PollsController < ApplicationController
     @poll = Poll.find(params[:id])
     @groups = @poll.groups_by_position
   end
+  
 end

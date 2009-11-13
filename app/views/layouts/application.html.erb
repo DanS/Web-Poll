@@ -27,21 +27,13 @@
         <div id="horiznav">
           <a href="/">Home</a>
           |
-          <a href="#">Partners</a>
+          <%= link_to 'About', home_path('about') %>
           |
-          <a href="#">Services</a>
-          |
-          <a href="#">Locations</a>
-          |
-          <a href="#">Contact</a>
-          |
+          <%= link_to 'Contact', home_path('contact') %>
         </div>
       </div>
       <div id="vertinav">
-        <span class="vertinavheader">navigation</span>
         <ul>
-          <li><a href="/">Home</a></li>
-
           <!-- subnav menu -->
           <% if @poll && @poll.id %>
             <%= content_tag('li', "Working on: #{@poll.name}") %>

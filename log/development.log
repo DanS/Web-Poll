@@ -57946,3 +57946,1113 @@ Rendering template within layouts/application
 Rendering polls/index
   [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 60ms (View: 52, DB: 2) | 200 OK [http://localhost/polls]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-11 16:48:44) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered user_sessions/_login (2.7ms)
+Completed in 97ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-11 16:50:29) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered user_sessions/_login (1.7ms)
+Completed in 26ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-11 16:50:44) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.1ms)
+Completed in 28ms (View: 15, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-11 16:51:18) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered user_sessions/_login (1.6ms)
+Completed in 20ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2009-11-11 16:51:25) [POST]
+  Parameters: {"commit"=>"Submit", "user_session"=>{"username"=>"joe", "password"=>"blow"}, "authenticity_token"=>"K+8411vtUz7O6xIN/LMpqrZGK8gWAdPfeJp5HVYg+p4="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".username) = 'joe') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 270ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-11 16:51:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "polls" WHERE ("polls".user_id = 1) [0m
+  [4;35;1mPoll Load (0.5ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls".user_id = 1) [0m
+Completed in 56ms (View: 33, DB: 2) | 200 OK [http://localhost/users/1]
+
+
+Processing AnswersController#show (for 127.0.0.1 at 2009-11-11 16:51:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPoll Load (0.3ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+  [4;35;1mGroup Load (418.1ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) [0m
+  [4;36;1mQuestion Load (2.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 1) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+Rendering template within layouts/application
+Rendering answers/show
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (1.3ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 1) AND ("questions".group_id = 1) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 1) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 2) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 3) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 4) [0m
+  [4;36;1mAnswer Load (0.4ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 5) [0m
+  [4;35;1mAnswer Load (0.4ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 6) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 8) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 7) [0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 2) AND ("questions".group_id = 2) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 9) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 10) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 11) [0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 3) AND ("questions".group_id = 3) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 12) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 563ms (View: 113, DB: 428) | 200 OK [http://localhost/answers/1]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-11 16:52:09) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-11 16:52:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "polls" WHERE ("polls".user_id = 1) [0m
+  [4;35;1mPoll Load (0.5ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls".user_id = 1) [0m
+Completed in 37ms (View: 14, DB: 2) | 200 OK [http://localhost/users/1]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-11 16:54:35) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 9) [0m
+  [4;35;1mGroup Load (0.9ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) AND ("groups".poll_id = 9) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) AND ("groups".poll_id = 9) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (1.4ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 18) AND ("questions".group_id = 18) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.9ms)
+Rendered polls/_radio_button (0.5ms)
+Rendered polls/_text_area (0.8ms)
+Rendered polls/_yes_no (1.7ms)
+Rendered polls/_yes_no (0.6ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) [0m
+Completed in 70ms (View: 46, DB: 3) | 200 OK [http://localhost/polls/9]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-11 16:56:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "polls" WHERE ("polls".user_id = 1) [0m
+  [4;35;1mPoll Load (0.5ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls".user_id = 1) [0m
+Completed in 39ms (View: 19, DB: 2) | 200 OK [http://localhost/users/1]
+
+
+Processing PollsController#edit (for 127.0.0.1 at 2009-11-11 16:56:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering polls/edit
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) [0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 1) [0m
+Rendered polls/_question (4.3ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.3ms)
+Rendered polls/_question (1.3ms)
+Rendered polls/_question (1.3ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.3ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (31.4ms)
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 2) [0m
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.3ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (9.7ms)
+  [4;36;1mQuestion Load (0.3ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 3) [0m
+Rendered polls/_question (3.3ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_group (8.2ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (3.4ms)
+Rendered polls/_create_question_form (67.6ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 173ms (View: 162, DB: 3) | 200 OK [http://localhost/polls/1/edit]
+
+
+Processing PollsController#edit (for 127.0.0.1 at 2009-11-11 16:57:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering polls/edit
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) [0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 1) [0m
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.3ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_group (25.9ms)
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 2) [0m
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (10.0ms)
+  [4;36;1mQuestion Load (0.4ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 3) [0m
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (5.9ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (3.4ms)
+Rendered polls/_create_question_form (56.8ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 91ms (View: 80, DB: 3) | 200 OK [http://localhost/polls/1/edit]
+
+
+Processing AnswersController#tabular (for 127.0.0.1 at 2009-11-11 16:57:53) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) [0m
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (0.7ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (0.6ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.8ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 60) [0m
+  [4;35;1mQuestion Load (0.4ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 61) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 62) [0m
+  [4;36;1mQuestion Load (0.3ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 63) [0m
+Rendering template within layouts/application
+Rendering answers/tabular
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.4ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 59)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 60)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 61)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 62)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 63)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 59)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 60)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 61)) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 62)) [0m
+  [4;35;1mAnswer Load (0.4ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 63)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 59)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 60)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 61)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 62)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 63)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 59)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 60)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 61)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 62)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 63)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 59)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 60)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 61)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 62)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 63)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 59)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 60)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 61)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 62)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 63)) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 207ms (View: 84, DB: 17) | 200 OK [http://localhost/answers/tabular/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-11 16:58:10) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.1ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.8ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.0ms)
+Rendered polls/_text_area (0.2ms)
+  [4;36;1mQuestion Load (0.6ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.9ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 58ms (View: 34, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-11 17:03:11) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (1.2ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.9ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.1ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 60ms (View: 35, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-11 17:03:24) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.3ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.8ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.0ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.6ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 56ms (View: 32, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#edit (for 127.0.0.1 at 2009-11-11 17:04:36) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering polls/edit
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) [0m
+Rendered polls/_question (1.6ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_group (15.1ms)
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) [0m
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_group (8.2ms)
+  [4;35;1mQuestion Load (0.4ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) [0m
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (6.0ms)
+Rendered polls/_question (1.6ms)
+Rendered polls/_group (3.8ms)
+Rendered polls/_create_question_form (45.2ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 150ms (View: 63, DB: 3) | 200 OK [http://localhost/polls/12/edit]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-11 17:04:38) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.8ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.0ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 55ms (View: 30, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:37:04) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (22.4ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (2.6ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (4.3ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (30.8ms)
+Rendered polls/_text_area (0.4ms)
+  [4;35;1mQuestion Load (1.1ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.3ms)
+Rendered polls/_text_area (0.4ms)
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 1918ms (View: 263, DB: 34) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:40:54) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.1ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.5ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.0ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 63ms (View: 36, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:42:57) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.3ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (1.2ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.3ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (2.0ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.1ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (1.6ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 148ms (View: 39, DB: 7) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:43:05) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (1.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.8ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.0ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 57ms (View: 32, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:45:11) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.3ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.1ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (83.6ms)
+Rendered polls/_text_area (0.4ms)
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.1ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 171ms (View: 145, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:49:03) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (1.1ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.8ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.0ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 57ms (View: 32, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:49:41) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (1.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.8ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.0ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 135ms (View: 110, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:50:06) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.8ms)
+Rendered polls/_text_area (0.3ms)
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.0ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 55ms (View: 30, DB: 5) | 200 OK [http://localhost/polls/12]
+
+
+Processing PollsController#edit (for 127.0.0.1 at 2009-11-12 13:50:11) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering polls/edit
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+  [4;35;1mQuestion Load (1.1ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) [0m
+Rendered polls/_question (1.6ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (61.2ms)
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) [0m
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (8.2ms)
+  [4;35;1mQuestion Load (0.3ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) [0m
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_group (6.1ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (3.5ms)
+Rendered polls/_create_question_form (90.7ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 198ms (View: 187, DB: 3) | 200 OK [http://localhost/polls/12/edit]
+
+
+Processing AnswersController#show (for 127.0.0.1 at 2009-11-12 13:50:14) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) [0m
+  [4;36;1mAnswer Load (1.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) [0m
+Rendering template within layouts/application
+Rendering answers/show
+  [4;35;1mGroup Load (0.9ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 60) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 61) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 62) [0m
+  [4;36;1mQuestion Load (0.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 63) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 82ms (View: 54, DB: 8) | 200 OK [http://localhost/answers/12]
+
+
+Processing AnswersController#tabular (for 127.0.0.1 at 2009-11-12 13:50:28) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+  [4;35;1mQuestion Load (0.5ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) [0m
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (0.7ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (0.6ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 60) [0m
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 61) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 62) [0m
+  [4;35;1mQuestion Load (0.3ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) [0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 63) [0m
+Rendering template within layouts/application
+Rendering answers/tabular
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 59)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 60)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 61)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 62)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 215572524173752) AND ("answers".question_id = 63)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 59)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 60)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 61)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 62)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 340499996582617) AND ("answers".question_id = 63)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 59)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 60)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 61)) [0m
+  [4;36;1mAnswer Load (413.9ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 62)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 382942500012728) AND ("answers".question_id = 63)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.4ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 59)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 60)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 61)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 62)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 499294917961904) AND ("answers".question_id = 63)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.4ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 59)) [0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 60)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 61)) [0m
+  [4;36;1mAnswer Load (0.4ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 62)) [0m
+  [4;35;1mAnswer Load (0.4ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 769240179110061) AND ("answers".question_id = 63)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.4ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 59)) [0m
+  [4;35;1mAnswer Load (0.2ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 60) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 60)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 61) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 61)) [0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 62) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 62)) [0m
+  [4;36;1mAnswer Load (0.2ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 63) AND (("answers"."responder_id" = 861988346953546) AND ("answers".question_id = 63)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 645ms (View: 183, DB: 431) | 200 OK [http://localhost/answers/tabular/12]
+
+
+Processing AnswersController#show (for 127.0.0.1 at 2009-11-12 13:50:45) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mPoll Load (0.3ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+  [4;36;1mQuestion Load (0.5ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) [0m
+  [4;35;1mAnswer Load (0.7ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 59) [0m
+Rendering template within layouts/application
+Rendering answers/show
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 59) [0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 60) [0m
+  [4;36;1mQuestion Load (1.7ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.6ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 61) [0m
+  [4;36;1mAnswer Load (0.5ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 62) [0m
+  [4;35;1mQuestion Load (0.7ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.6ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 63) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 61ms (View: 33, DB: 9) | 200 OK [http://localhost/answers/12]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-12 13:50:54) [GET]
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-12 13:50:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "polls" WHERE ("polls".user_id = 1) [0m
+  [4;36;1mPoll Load (0.4ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls".user_id = 1) [0m
+Completed in 57ms (View: 37, DB: 2) | 200 OK [http://localhost/users/1]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:51:00) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 9) [0m
+  [4;36;1mGroup Load (0.8ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) AND ("groups".poll_id = 9) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) AND ("groups".poll_id = 9) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (1.2ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 18) AND ("questions".group_id = 18) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.6ms)
+Rendered polls/_radio_button (0.6ms)
+Rendered polls/_text_area (0.3ms)
+Rendered polls/_yes_no (0.5ms)
+Rendered polls/_yes_no (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) [0m
+Completed in 52ms (View: 29, DB: 3) | 200 OK [http://localhost/polls/9]
+
+
+Processing PollsController#edit (for 127.0.0.1 at 2009-11-12 13:51:15) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering polls/edit
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 18) [0m
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_question (1.3ms)
+Rendered polls/_question (1.4ms)
+Rendered polls/_group (20.6ms)
+Rendered polls/_question (1.5ms)
+Rendered polls/_group (3.5ms)
+Rendered polls/_create_question_form (34.8ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 62ms (View: 52, DB: 2) | 200 OK [http://localhost/polls/9/edit]
+
+
+Processing PollsController#update (for 127.0.0.1 at 2009-11-12 13:51:26) [PUT]
+  Parameters: {"commit"=>"Update", "poll"=>{"name"=>"Community Healing", "groups_attributes"=>{"0"=>{"name"=>"Community Healing Process", "_delete"=>"", "id"=>"18", "questions_attributes"=>{"0"=>{"text"=>"Would you be interested in a having a Forum offered here in late October or early November?  *It would be open to anyone who wants to participate, but there will be no expectation to attend.  Everyone will be at choice. ", "_delete"=>"", "id"=>"48", "form_field_type"=>"radio_button", "position"=>"0", "field_name"=>"interest", "answer_choices"=>"yes|no"}, "1"=>{"text"=>"Do you think you would want to attend?", "_delete"=>"", "id"=>"49", "form_field_type"=>"radio_button", "position"=>"1", "field_name"=>"attend?", "answer_choices"=>"yes|no"}, "2"=>{"text"=>"Do you have indoor space you'd be willing to offer for a forum facilitator to stay in?", "_delete"=>"", "id"=>"50", "form_field_type"=>"text_area", "position"=>"2", "field_name"=>"lodging", "answer_choices"=>"yes|no"}, "3"=>{"text"=>"Do you have concerns about having Forum offered here? (I think we would probably want to have exclusive use of the great room for somewhere between 4-10 hours over a 2-3 day period.  The time allocated for this would probably be no more than 2 hours at any one time and wwe could be pretty flexible about when this happens.", "_delete"=>"", "id"=>"51", "form_field_type"=>"yes_no", "position"=>"3", "field_name"=>"concerns", "answer_choices"=>"yes|no"}, "4"=>{"text"=>"yes or no?", "_delete"=>"1", "id"=>"53", "form_field_type"=>"yes_no", "position"=>"5", "field_name"=>"yes_no", "answer_choices"=>"yes|no"}}, "position"=>"0"}}}, "authenticity_token"=>"K+8411vtUz7O6xIN/LMpqrZGK8gWAdPfeJp5HVYg+p4=", "id"=>"9"}
+  [4;35;1mPoll Load (0.3ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 9) [0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) [0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 18) [0m
+  [4;36;1mQuestion Destroy (0.4ms)[0m   [0;1mDELETE FROM "questions" WHERE "id" = 53[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 146ms (DB: 4) | 302 Found [http://localhost/polls/9]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-12 13:51:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "polls" WHERE ("polls".user_id = 1) [0m
+  [4;35;1mPoll Load (0.4ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls".user_id = 1) [0m
+Completed in 38ms (View: 17, DB: 2) | 200 OK [http://localhost/users/1]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:51:29) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 9) [0m
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) AND ("groups".poll_id = 9) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) AND ("groups".poll_id = 9) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (1.1ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 18) AND ("questions".group_id = 18) ORDER BY position ASC[0m
+Rendered polls/_radio_button (0.5ms)
+Rendered polls/_radio_button (0.5ms)
+Rendered polls/_text_area (0.3ms)
+Rendered polls/_yes_no (0.5ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 9) [0m
+Completed in 50ms (View: 28, DB: 3) | 200 OK [http://localhost/polls/9]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 13:59:36) [GET]
+  Parameters: {"id"=>"about"}
+  [4;36;1mPoll Load (0.1ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Poll with ID=about):
+  app/controllers/polls_controller.rb:15:in `show'
+
+Rendered rescues/_trace (118.3ms)
+Rendered rescues/_request_and_response (5.2ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 14:02:09) [GET]
+  Parameters: {"id"=>"about"}
+  [4;35;1mPoll Load (0.1ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Poll with ID=about):
+  app/controllers/polls_controller.rb:15:in `show'
+
+Rendered rescues/_trace (33.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 14:02:10) [GET]
+  Parameters: {"id"=>"about"}
+  [4;36;1mPoll Load (0.1ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Poll with ID=about):
+  app/controllers/polls_controller.rb:15:in `show'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#about (for 127.0.0.1 at 2009-11-12 14:25:51) [GET]
+
+LoadError (Expected /Users/dan/projects/rails/webpoll/app/controllers/home_controller.rb to define HomeController):
+  
+
+Rendered rescues/_trace (40.7ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#about (for 127.0.0.1 at 2009-11-12 14:26:45) [GET]
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 131ms (View: 128, DB: 1) | 200 OK [http://localhost/home/about]
+
+
+Processing HomeController#about (for 127.0.0.1 at 2009-11-12 14:38:08) [GET]
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 38ms (View: 35, DB: 1) | 200 OK [http://localhost/home/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 14:38:10) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 24, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 14:38:12) [GET]
+  Parameters: {"page"=>"contact"}
+
+ActionView::MissingTemplate (Missing template home/contact.erb in view path app/views):
+  app/controllers/home_controller.rb:6:in `show'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 14:54:14) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 63ms (View: 60, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 14:57:51) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 55ms (View: 51, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 14:59:42) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 28, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:00:57) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 26ms (View: 23, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:03:27) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 99ms (View: 95, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:04:18) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 27, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:05:12) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 24, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:06:02) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 93ms (View: 89, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:06:14) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 23, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:06:52) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 24, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:09:00) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 26, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:19:08) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 64ms (View: 60, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:19:56) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:22:47) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 28, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:23:10) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 29ms (View: 25, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:23:37) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 28ms (View: 24, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:24:04) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 23, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:28:14) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 33ms (View: 30, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 15:30:48) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 31ms (View: 28, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 16:21:37) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 234ms (View: 200, DB: 32) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 16:22:30) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 36ms (View: 32, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 16:23:02) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 27ms (View: 24, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 16:25:08) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 30ms (View: 26, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 16:25:21) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 97ms (View: 93, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 16:28:04) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 28ms (View: 24, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 16:28:19) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 28ms (View: 24, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing HomeController#show (for 127.0.0.1 at 2009-11-12 16:28:50) [GET]
+  Parameters: {"page"=>"about"}
+Rendering template within layouts/application
+Rendering home/about
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 28ms (View: 24, DB: 1) | 200 OK [http://localhost/about]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-12 16:29:06) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed in 25ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-12 16:29:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "polls" WHERE ("polls".user_id = 1) [0m
+  [4;36;1mPoll Load (0.6ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls".user_id = 1) [0m
+Completed in 96ms (View: 69, DB: 3) | 200 OK [http://localhost/users/1]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-12 16:29:54) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mPoll Load (0.3ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 12) [0m
+  [4;36;1mGroup Load (428.5ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) AND ("groups".poll_id = 12) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (2.2ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 21) AND ("questions".group_id = 21) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.8ms)
+Rendered polls/_text_area (0.9ms)
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 22) AND ("questions".group_id = 22) ORDER BY position ASC[0m
+Rendered polls/_radio_button (1.1ms)
+Rendered polls/_text_area (0.3ms)
+  [4;36;1mQuestion Load (0.8ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 23) AND ("questions".group_id = 23) ORDER BY position ASC[0m
+Rendered polls/_options (21.7ms)
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mGroup Load (0.6ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 12) [0m
+Completed in 612ms (View: 128, DB: 434) | 200 OK [http://localhost/polls/12]

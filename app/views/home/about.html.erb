@@ -1,0 +1,37 @@
+<h1>About Web Poll</h1>
+
+
+<div class="about">
+  <div class="right_column">
+    <div class="center">
+      Model Relationship Diagram
+      <img src="images/models.png" alt="model relationship diagram" height="75%"
+           width="75%">
+    </div>
+  </div>
+  <div class="left_column">
+    <p>
+      What I think is cool about this site is that during the creation/ editing of
+      polls you can dynamically add and remove groups and questions.  This is done
+      with javascript on the client side so the response is real snappy.
+    </p>
+    <p>
+      What is also cool about this the model relationships diagrammed at right.
+    <ul>
+      <li>A Poll has many Groups </li>
+      <li>A Group has many Questions </li>
+      <li>A Question has many Answers</li>
+    </ul>
+    </p>
+    <p>
+      When you are creating a new poll the Poll, Group, and Question objects don't
+      exist.  They and their relationships are all created when the form is submitted.
+      This is done through the magic of "accepts_nested_attributes_for". Many thanks
+      to Ryan Bates for showing how to do deeply nested forms like this.
+      <a href="http://github.com/ryanb/complex-form-examples/tree/deep">shown here</a>
+    </p>
+    <p>
+      I used the Authlogic gem to create the authenication for this site.
+    </p>
+  </div>
+</div>

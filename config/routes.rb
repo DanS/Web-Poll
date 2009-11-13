@@ -7,6 +7,9 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
 
+  map.home ':page', :controller => 'home', :action => 'show',
+    :page => /about|contact/
+
   map.resources :user_sessions
 
   map.resources :users
