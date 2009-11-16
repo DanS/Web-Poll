@@ -1,5 +1,4 @@
-<%= text_area(@answer, :post, :cols => 1, 
-  :rows => 8,# width set by css
+<%= text_area(@answer, :post, :cols => 1, :rows => 8,# width set by css
   :id=>question.id,
   :name=>"answer[answer_to_question_#{question.id}]",
   :value=>"#{@answer[question.field_name]}" ) %>

@@ -8,6 +8,4 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username, :message => 'username has already been taken.
     Please choose a different user username'
   validates_confirmation_of :password
-
-  
 end
