@@ -59903,3 +59903,69 @@ Rendering template within layouts/application
 Rendering user_sessions/index
 Rendered user_sessions/_login (2.1ms)
 Completed in 30ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2009-11-16 10:55:17) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/new
+Rendered user_sessions/_login (3.3ms)
+Completed in 30ms (View: 10, DB: 1) | 200 OK [http://localhost/login]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-16 10:55:27) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.0ms)
+Completed in 30ms (View: 14, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-16 11:01:16) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered user_sessions/_login (2.0ms)
+Completed in 64ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-16 11:48:42) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered user_sessions/_login (3.3ms)
+Completed in 138ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-16 11:48:45) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered user_sessions/_login (2.1ms)
+Completed in 25ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-16 11:48:48) [GET]
+Rendering template within layouts/application
+Rendering users/new
+
+ActionView::TemplateError (Missing template users/_form.erb in view path app/views) on line #3 of app/views/users/new.html.erb:
+1: <% title "New User" %>
+2: 
+3: <%= render :partial => 'form' %>
+
+    app/views/users/new.html.erb:3
+    app/controllers/users_controller.rb:32:in `new'
+
+Rendered rescues/_trace (66.5ms)
+Rendered rescues/_request_and_response (41.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-16 11:52:31) [GET]
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered user_sessions/_login (3.6ms)
+Completed in 104ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-16 11:52:33) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.7ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/users/new]
