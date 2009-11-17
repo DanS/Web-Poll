@@ -60395,3 +60395,213 @@ Rendering answers/tabular
   [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 70) AND (("answers"."responder_id" = '993278058685974') AND ("answers".question_id = 70)) [0m
   [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
 Completed in 66ms (View: 37, DB: 5) | 200 OK [http://localhost/answers/tabular/17]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "responder_id" varchar(255), "answer_text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "groups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "position" integer, "poll_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar(255), "group_id" integer, "form_field_type" varchar(255), "answer_choices" varchar(255), "field_name" varchar(255), "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091117173245')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090626125412')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090626125810')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090629165546')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090714173537')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090730225827')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090730232032')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090817172256')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090819215646')[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090911144105')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090928120155')[0m
+
+
+Processing AnswersController#tabular (for 127.0.0.1 at 2009-11-17 09:59:30) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 17) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Poll with ID=17):
+  app/controllers/answers_controller.rb:26:in `tabular'
+
+Rendered rescues/_trace (54.2ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#index (for 127.0.0.1 at 2009-11-17 09:59:35) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/index
+Rendered user_sessions/_login (3.4ms)
+Completed in 47ms (View: 22, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-11-17 09:59:39) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (6.7ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 37ms (View: 20, DB: 1) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-11-17 09:59:50) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"blow", "username"=>"joe", "password"=>"blow", "email"=>"joe@example.com"}, "commit"=>"Submit", "authenticity_token"=>"EGwv84s0/nHt8BDY2ZHABM2kxUO7rZQ9l0ZSzcsTLu8="}
+  [4;35;1mUser Exists (0.7ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'joe@example.com') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."username") = 'joe') LIMIT 1[0m
+  [4;35;1mUser Exists (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+  [4;36;1mUser Exists (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'joe') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Create (0.7ms)[0m   [0;1mINSERT INTO "users" ("updated_at", "crypted_password", "username", "password_salt", "persistence_token", "email", "created_at") VALUES('2009-11-17 17:59:50', '5b376a83d83c263ef1ad6637b5d5ade633fcae61128f239f318bf2bb29f3d5929160a364e539ff8953043729f31ba8df61e0de653578d64fa9a66a0828074c24', 'joe', 'HSMxOs5aLtbv996r5CGV', '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4', 'joe@example.com', '2009-11-17 17:59:50')[0m
+Redirected to http://localhost:3000/users/1
+Completed in 316ms (DB: 3) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-17 09:59:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "polls" WHERE ("polls".user_id = 1) [0m
+Completed in 38ms (View: 12, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing PollsController#new (for 127.0.0.1 at 2009-11-17 09:59:53) [GET]
+Rendering template within layouts/application
+Rendering polls/new
+Rendered polls/_question (6.6ms)
+Rendered polls/_group (20.2ms)
+Rendered polls/_question (2.0ms)
+Rendered polls/_group (4.7ms)
+Rendered polls/_create_question_form (35.3ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+Completed in 81ms (View: 66, DB: 1) | 200 OK [http://localhost/polls/new]
+
+
+Processing PollsController#create (for 127.0.0.1 at 2009-11-17 10:00:15) [POST]
+  Parameters: {"commit"=>"Create", "poll"=>{"name"=>"test", "groups_attributes"=>{"0"=>{"name"=>"group 1", "_delete"=>"", "questions_attributes"=>{"1258480802758"=>{"text"=>"question one", "_delete"=>"", "form_field_type"=>"text_field", "position"=>"0", "field_name"=>"q1", "answer_choices"=>""}}, "position"=>"0"}}}, "authenticity_token"=>"EGwv84s0/nHt8BDY2ZHABM2kxUO7rZQ9l0ZSzcsTLu8="}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+  [4;36;1mPoll Create (0.4ms)[0m   [0;1mINSERT INTO "polls" ("name", "updated_at", "user_id", "created_at") VALUES('test', '2009-11-17 18:00:15', 1, '2009-11-17 18:00:15')[0m
+  [4;35;1mGroup Create (0.1ms)[0m   [0mINSERT INTO "groups" ("name", "updated_at", "position", "poll_id", "created_at") VALUES('group 1', '2009-11-17 18:00:15', 0, 1, '2009-11-17 18:00:15')[0m
+  [4;36;1mQuestion Create (0.2ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "text", "group_id", "form_field_type", "field_name", "position", "answer_choices", "created_at") VALUES('2009-11-17 18:00:15', 'question one', 1, 'text_field', 'q1', 0, '', '2009-11-17 18:00:15')[0m
+Redirected to http://localhost:3000/users/1
+Completed in 138ms (DB: 2) | 302 Found [http://localhost/polls]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-11-17 10:00:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "polls" WHERE ("polls".user_id = 1) [0m
+  [4;36;1mPoll Load (0.3ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls".user_id = 1) [0m
+Completed in 37ms (View: 12, DB: 2) | 200 OK [http://localhost/users/1]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-17 10:00:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPoll Load (0.3ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+  [4;36;1mGroup Load (0.8ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 1) AND ("questions".group_id = 1) ORDER BY position ASC[0m
+Rendered polls/_text_field (1.0ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) [0m
+Completed in 65ms (View: 38, DB: 3) | 200 OK [http://localhost/polls/1]
+
+
+Processing AnswersController#create (for 127.0.0.1 at 2009-11-17 10:00:21) [POST]
+  Parameters: {"answer"=>{"responder_id"=>"0", "answer_to_question_1"=>"xxx", "poll_id"=>"1"}, "commit"=>"Save Answers", "authenticity_token"=>"EGwv84s0/nHt8BDY2ZHABM2kxUO7rZQ9l0ZSzcsTLu8="}
+  [4;35;1mAnswer Create (0.4ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "responder_id", "answer_text", "created_at") VALUES('2009-11-17 18:00:21', 1, 862497070425224, 'xxx', '2009-11-17 18:00:21')[0m
+  [4;36;1mPoll Load (0.3ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+Redirected to http://localhost:3000/polls/1
+Completed in 21ms (DB: 1) | 302 Found [http://localhost/answers]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-17 10:00:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPoll Load (0.3ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+  [4;36;1mGroup Load (0.8ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+  [4;36;1mQuestion Load (0.9ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 1) AND ("questions".group_id = 1) ORDER BY position ASC[0m
+Rendered polls/_text_field (0.5ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) [0m
+Completed in 62ms (View: 32, DB: 3) | 200 OK [http://localhost/polls/1]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-17 10:01:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPoll Load (0.3ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+  [4;35;1mGroup Load (1.6ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 1) AND ("questions".group_id = 1) ORDER BY position ASC[0m
+Rendered polls/_text_field (1.1ms)
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) [0m
+Completed in 99ms (View: 50, DB: 4) | 200 OK [http://localhost/polls/1]
+
+
+Processing AnswersController#create (for 127.0.0.1 at 2009-11-17 10:01:38) [POST]
+  Parameters: {"answer"=>{"responder_id"=>"0", "answer_to_question_1"=>"ttt", "poll_id"=>"1"}, "commit"=>"Save Answers", "authenticity_token"=>"EGwv84s0/nHt8BDY2ZHABM2kxUO7rZQ9l0ZSzcsTLu8="}
+  [4;36;1mAnswer Create (0.4ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "responder_id", "answer_text", "created_at") VALUES('2009-11-17 18:01:39', 1, '668648634189829', 'ttt', '2009-11-17 18:01:39')[0m
+  [4;35;1mPoll Load (0.3ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+Redirected to http://localhost:3000/polls/1
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/answers]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-17 10:01:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPoll Load (0.3ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 1) [0m
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) AND ("groups".poll_id = 1) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (0.9ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 1) AND ("questions".group_id = 1) ORDER BY position ASC[0m
+Rendered polls/_text_field (0.5ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '1f07a7ed2e307aaaa41611a1123078ca510d73493d804769fc9b29542d11f68b5cd4ebbf60503d7ecba3d314dcbbd606099fab0b05f1b3198d1a80d34257f3a4') LIMIT 1[0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 1) [0m
+Completed in 61ms (View: 32, DB: 3) | 200 OK [http://localhost/polls/1]
