@@ -49,7 +49,7 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.xml
   def create
-    responder_id = params[:responder_id] || rand.to_s[2,6].to_i
+    responder_id = params[:responder_id] || rand.to_s[2,11].to_i
     for ans in params[:answer].keys.select {|k|  k =~ /^answer_to_question_/}
       Answer.create(:responder_id=>responder_id, :question_id=>ans[-2,2].to_i,
         :answer_text=>params['answer'][ans])
