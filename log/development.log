@@ -60250,3 +60250,148 @@ Rendered polls/_text_field (0.5ms)
   [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
   [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) [0m
 Completed in 122ms (View: 29, DB: 3) | 200 OK [http://localhost/polls/17]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGroups (20090626125412)
+Migrating to CreateQuestions (20090626125810)
+Migrating to AddAnswerDataTypeColumnToQuestions (20090629165546)
+Migrating to CreatePolls (20090714173537)
+Migrating to CreateUsers (20090730225827)
+Migrating to CreateSessions (20090730232032)
+Migrating to RemoveAnswerDataType (20090817172256)
+Migrating to CreateAnswers (20090819215646)
+Migrating to ChangeAssocsPollsHaveGroupsHaveQuestions (20090911144105)
+Migrating to Rename (20090928120155)
+Migrating to ChangeAnswerResponderIdType (20091117173245)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (9.4ms)[0m   [0mCREATE TEMPORARY TABLE "altered_answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "responder_id" integer, "answer_text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mPRAGMA index_list("answers")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "answers"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "responder_id" varchar(255), "answer_text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_answers")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDROP TABLE "altered_answers"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091117173245')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("answers")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("groups")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("polls")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("questions")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-17 09:37:03) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 17) [0m
+  [4;35;1mGroup Load (0.7ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (1.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+Rendered polls/_text_field (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) [0m
+Completed in 49ms (View: 27, DB: 3) | 200 OK [http://localhost/polls/17]
+
+
+Processing AnswersController#create (for 127.0.0.1 at 2009-11-17 09:37:07) [POST]
+  Parameters: {"answer"=>{"responder_id"=>"0", "answer_to_question_70"=>"asdf", "poll_id"=>"17"}, "commit"=>"Save Answers", "authenticity_token"=>"E43kJRMHk378jKwr1o3ggAKs3h6c4l17edEgngogBrU="}
+  [4;36;1mAnswer Create (0.4ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "responder_id", "answer_text", "created_at") VALUES('2009-11-17 17:37:07', 70, 943035830698098, 'asdf', '2009-11-17 17:37:07')[0m
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 17) [0m
+Redirected to http://localhost:3000/polls/17
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/answers]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-17 09:37:07) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 17) [0m
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (1.2ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+Rendered polls/_text_field (0.5ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) [0m
+Completed in 120ms (View: 94, DB: 3) | 200 OK [http://localhost/polls/17]
+
+
+Processing AnswersController#create (for 127.0.0.1 at 2009-11-17 09:37:11) [POST]
+  Parameters: {"answer"=>{"responder_id"=>"0", "answer_to_question_70"=>"asdfasdf", "poll_id"=>"17"}, "commit"=>"Save Answers", "authenticity_token"=>"E43kJRMHk378jKwr1o3ggAKs3h6c4l17edEgngogBrU="}
+  [4;36;1mAnswer Create (0.4ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "responder_id", "answer_text", "created_at") VALUES('2009-11-17 17:37:11', 70, 993278058685974, 'asdfasdf', '2009-11-17 17:37:11')[0m
+  [4;35;1mPoll Load (0.2ms)[0m   [0mSELECT * FROM "polls" WHERE ("polls"."id" = 17) [0m
+Redirected to http://localhost:3000/polls/17
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/answers]
+
+
+Processing PollsController#show (for 127.0.0.1 at 2009-11-17 09:37:11) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 17) [0m
+  [4;35;1mGroup Load (1.1ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering polls/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (0.8ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+Rendered polls/_text_field (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) [0m
+Completed in 48ms (View: 26, DB: 3) | 200 OK [http://localhost/polls/17]
+
+
+Processing AnswersController#show (for 127.0.0.1 at 2009-11-17 09:37:16) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 17) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) [0m
+  [4;36;1mQuestion Load (0.3ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 28) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 70) [0m
+Rendering template within layouts/application
+Rendering answers/show
+  [4;36;1mGroup Load (0.8ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (0.6ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 70) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 51ms (View: 30, DB: 3) | 200 OK [http://localhost/answers/17]
+
+
+Processing AnswersController#tabular (for 127.0.0.1 at 2009-11-17 09:37:19) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mPoll Load (0.2ms)[0m   [0;1mSELECT * FROM "polls" WHERE ("polls"."id" = 17) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) [0m
+  [4;36;1mQuestion Load (0.4ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 28) [0m
+  [4;35;1mAnswer Load (0.5ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 70) [0m
+  [4;36;1mGroup Load (0.7ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mQuestion Load (0.6ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+Rendering template within layouts/application
+Rendering answers/tabular
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 70) AND (("answers"."responder_id" = '236424237172475') AND ("answers".question_id = 70)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 70) AND (("answers"."responder_id" = '27014409897158') AND ("answers".question_id = 70)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 70) AND (("answers"."responder_id" = '39849450301262') AND ("answers".question_id = 70)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+  [4;35;1mAnswer Load (0.3ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 70) AND (("answers"."responder_id" = '943035830698098') AND ("answers".question_id = 70)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "groups" WHERE ("groups".poll_id = 17) AND ("groups".poll_id = 17) ORDER BY position ASC[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".group_id = 28) AND ("questions".group_id = 28) ORDER BY position ASC[0m
+  [4;36;1mAnswer Load (0.3ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 70) AND (("answers"."responder_id" = '993278058685974') AND ("answers".question_id = 70)) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Completed in 66ms (View: 37, DB: 5) | 200 OK [http://localhost/answers/tabular/17]
