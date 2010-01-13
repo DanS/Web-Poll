@@ -1,6 +1,5 @@
-<%#generate buttons %>
 <% for choice in question.answer_choices.split('|') -%>
-  <div class="radio_button">
+  <div class=<%= button_arrangement(question) %>>
     <% selected = '' %>
     <%= radio_button(@answer, :post, choice,
       :id=>"#{choice}#{question.id}",

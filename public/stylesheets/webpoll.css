@@ -26,6 +26,10 @@
     display: table;
 }
 
+.vertical_buttons input {
+  clear: both;
+}
+
 .left_column {
   margin: 5px;
   width: 45%;
