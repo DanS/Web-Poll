@@ -6,7 +6,7 @@ Feature: create new user account
 
     Scenario: anyone should be able to create an account
         Given I am not already a user
-        When I fill out the new user form
+        When I fill out the new user form with username "joe" and password "password"
         Then an account should be created
 
     Scenario: Existing user can login

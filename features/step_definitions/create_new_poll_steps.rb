@@ -8,7 +8,8 @@ Then /^they should go to the new poll page$/ do
 end
 
 Then /^they should be able to create a new poll$/ do
-  fill_in 'Name', :with => 'new poll name'
+  fill_in 'Poll Name', :with => 'new poll name'
+  fill_in 'group name', :with => 'new group name'
   click_button 'Create'
 end
 

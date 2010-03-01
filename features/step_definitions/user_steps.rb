@@ -1,12 +1,23 @@
 Given /^I am not already a user$/ do
 end
 
-When /^I fill out the new user form$/ do
+When /^I fill out the new user form with username "([^\"]*)" and password "([^\"]*)"$/ do 
+|username, password|
   visit 'users/new'
-  fill_in "Username", :with=>'Joe'
-  fill_in "Password", :with=>'password'
-  fill_in "user_password_confirmation", :with=>'password'
-  fill_in "Email", :with=>'joe@example.com'
+  fill_in "Username", :with => username
+  fill_in "Password", :with => password
+  fill_in "user_password_confirmation", :with => password
+  fill_in "Email", :with => username + '@example.com'
+end
+
+Given /^they register and login with username "([^\"]*)" and password "([^\"]*)"$/ do 
+  |username, password|
+  visit 'users/new'
+  fill_in "Username", :with => username
+  fill_in "Password", :with => password
+  fill_in "user_password_confirmation", :with => password
+  fill_in "Email", :with => username + '@example.com'
+  click_button "Submit"
 end
 
 Then /^an account should be created$/ do

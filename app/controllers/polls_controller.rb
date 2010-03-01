@@ -37,7 +37,7 @@ class PollsController < ApplicationController
   def create
     modified_params = ensure_position_assigned(params)
     @poll = Poll.new(modified_params)
-    @poll.user_id = current_user.id
+    @poll.user = current_user
     respond_to do |format|
       if @poll.save
         flash[:notice] = 'Poll was successfully created.'
